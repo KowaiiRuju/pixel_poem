@@ -101,7 +101,7 @@ audio {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  max-width: 500px;
+  min-width: 400px;
   
   background-color: #17212d9a;
   border-radius: 10px ;
@@ -109,12 +109,13 @@ audio {
   padding: 1.2em;
 }
 .pfp{
-  width: 8em;
+  width: 6em;
   border-radius: 50%;
   border: #DA6D91 solid;
 }
 .profile-containers {
   border: 2px solid #DA6D91;
+  min-width: 300px;
   border-radius: 5px;
 }
 footer {
@@ -130,17 +131,27 @@ footer {
   font-size: 1.2em;
 }
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3.2em;
+  body {
+    font-size: 0.9em; /* Slightly reduce overall font size */
+    padding: 10px;
+  }
+
+  .font {
+    font-size: 2em; /* Reduce the title size */
+    padding: 5px;
+    margin-bottom: 10px;
   }
 
   .nav-link {
-    font-size: 2.4em;
+    font-size: 1.5em; /* Smaller navigation links */
+    transform: scale(1); /* Reduce hover size effect */
   }
 
-  .navigation {
-    gap: 15px;
+  .container {
+    min-width: 90%; /* Make container width flexible */
+    padding: 0.8em;
   }
+
 }
 
 @keyframes fadeIn {
