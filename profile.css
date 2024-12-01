@@ -15,8 +15,11 @@
     background-color: #3b421d54;
     border: 2px solid #a8ad58;
     padding: 10px;
-    max-width: 400px;
+    flex: 1;
     border-radius: 10px;
+    max-width: 350px;
+    flex-grow: 0;
+    min-width: 300px;
     animation: fadeIn 1s ease-in-out; 
     padding: 40px;
     
@@ -61,8 +64,9 @@ body {
 .pfp{
     animation: fadeIn 1s ease-in-out; 
     width: 100px;
-    border-radius: 50%;
+    border-radius: 10px;
     border: 2px solid #a8ad58;
+    justify-content: right;
     
 }
 .pfp:hover{
@@ -110,8 +114,8 @@ body {
     border-radius: 5px;
     border: 2px solid transparent;
     animation: fadeIn 1s ease-in-out;
-    background-color: #302e2b56;
-    border: 2px solid #a36d3a;
+    background-color: #1816146e;
+    border: 2px solid #6d4a1c;
 }
 
 .nav-link:hover {
