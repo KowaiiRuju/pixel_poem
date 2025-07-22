@@ -25,6 +25,9 @@
     
 
 }
+.container a{
+  text-decoration: none;
+}
 p em{
     color: #00ff6a;
     text-decoration: underline;

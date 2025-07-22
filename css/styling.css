@@ -11,8 +11,8 @@
 
 }
 body {
-  background-image: url("../../images/2f10ce69b96c0611989308b0abc68e70.gif");
-  background-color: #ff66cc;
+
+  background-color: #99dbe1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -54,8 +54,8 @@ body {
   font-family: "Micro 5", sans-serif;
   font-size: 2.8em;
   text-decoration: none;
-  color: #ff8c1a;
-  text-shadow: 0 0 8px #ff4500;
+  color: #100f0d;
+  font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease;
   transform: scale(3);
   padding: 10px 15px;
@@ -87,6 +87,74 @@ footer {
   padding: 10px;
   font-size: 1.2em;
 }
+
+.container{
+    
+    background-color: #3b421d54;
+    border: 2px solid #a8ad58;
+    padding: 10px;
+    flex: 1;
+    border-radius: 10px;
+    max-width: 350px;
+    flex-grow: 0;
+    min-width: 300px;
+    animation: fadeIn 1s ease-in-out; 
+    padding: 40px;
+    
+
+}
+
+/* Poem list container (with tape effect) */
+#poem-list {
+  position: relative;
+  margin-top: 30px;
+  background-color: #3b421d54;
+  border: 2px solid #a8ad58;
+  border-radius: 10px;
+  max-width: 400px;
+  min-width: 300px;
+  padding: 20px;
+  color: #ffe6b3;
+  font-family: 'Tiny5', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+  display: none; /* Hidden by default, toggled by JS */
+}
+
+/* Tape effect (single strip at the top, diagonal) */
+#poem-list::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);
+  width: 120px;
+  height: 30px;
+  background: #f7e7ce; /* Tape color */
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+/* Links inside the poem list */
+#poem-list a {
+  display: block;
+  margin: 8px 0;
+  padding: 6px 10px;
+  color: #ffdc6c;
+  font-size: 1.3em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+#poem-list a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+  color: #ffd700;
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 0.9em; /* Slightly reduce overall font size */

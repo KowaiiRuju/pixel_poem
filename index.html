@@ -13,20 +13,27 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <div class="navigation">
-      <h1 class="font" style="text-align: center; color: #ffdc6c">
-        Welcome Traveller
-      </h1>
-      <div class="links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="profile.html" class="nav-link">Profile</a>
-      </div>
+  <body >
+    <div class="nav-links" style="margin-bottom: 50px; position: absolute; left: 30px; top: 20px;">
+      <a href="profile.html" class="nav-link">Profile</a>
     </div>
+    
+    <div class="navigation" >
+      
+      <div class="links">
+        <a href="#" class="nav-link" id="toggle-poems">Click Me!</a>
+        
+      </div>
+      <div class="container" id="poem-list" style="display: none;"></div>
+    </div>
+    <!--
+    
     <audio autoplay loop>
       <source src="Sonder(chosic.com).mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
     <footer><p>Song: Sonder by Purrple Cat</p></footer>
+    -->
+    <script src="scripts/scripts.js" defer></script>
   </body>
 </html>

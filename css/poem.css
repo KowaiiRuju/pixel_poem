@@ -24,6 +24,45 @@ body {
   text-align: center; 
 }
 
+.poem-container {
+  margin: 30px auto;
+  max-width: 700px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #DA6D91;
+  border-radius: 10px;
+  color: #ffe6b3;
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #ffdc6c;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.back-btn:hover {
+  color: #ff8c1a;
+}
+
+.poem-title {
+  font-family: "Tiny5", sans-serif;
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ff9900;
+}
+
+.poem-text {
+  white-space: pre-wrap; /* Keeps poem formatting with line breaks */
+  font-family: 'Tiny5', sans-serif;
+}
+
+
 @media (max-width: 768px) {
   body {
     font-size: 0.9em; /* Slightly reduce overall font size */
