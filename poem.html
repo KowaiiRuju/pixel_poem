@@ -4,23 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Poem</title>
-  <link rel="stylesheet" href="css/styling.css" />
+  <!-- Use the notebook-style CSS -->
+  <link rel="stylesheet" href="css/poem.css" />
 </head>
 <body>
   <div class="navigation" style="margin-bottom: 50px;">
-    <div class="links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="profile.html" class="nav-link">Profile</a>
-
+    <div class="links" style="position: absolute; top: 20px; left: 20px;">
+      <a href="index.html" class="nav-link nav-corner">Home</a>
     </div>
   </div>
 
+  <!-- Notebook container -->
   <div class="poem-container">
-    
-    <div class="poem" id="poem-content">Loading poem...</div>
+    <!-- Inner "page" for lined-paper look -->
+    <div class="page">
+      <div class="poem" id="poem-content">Loading poem...</div>
+    </div>
   </div>
 
-  <!-- External script -->
+  <!-- Script that loads the poem dynamically -->
   <script src="scripts/poem.js" defer></script>
 </body>
 </html>

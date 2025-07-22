@@ -15,41 +15,34 @@
   <body>
     <div class="links">
       <a href="index.html" class="nav-link">Home</a>
-
     </div>
+
     <div class="container">
       <h1 class="floating-letters">Inn Keeper's Profile</h1>
       <img class="pfp" src="../../images/pfp_emman.jpg" alt="Profile Picture" draggable="false"/>
+
       <div style="text-align: left">
         <p>Name: <em>Emmanuel V. Sanchez</em></p>
-        <p>Age: <em>20</em></p>
+        <p>Age: <em id="age"></em></p> <!-- Auto-updating age -->
         <p>Course:<em> BS Computer Science</em></p>
         <p>Race: <em>Human</em></p>
         <p>Gender:<em> M</em></p>
       </div>
+
       <h2>Bio</h2>
       <p style="color: #22eb8d">
         <em style="text-decoration: none">
-          Born in December 24, 2003, he had always been easy-going. He didn't
-          strive for anything. But now that he's now actively pursuing
-          something, only God can tell what lies ahead of him.</em
-        >
+          Born on December 24, 2003, he had always been easy-going. He didn't
+          strive for anything. But now that he's actively pursuing something,
+          only God can tell what lies ahead of him.
+        </em>
       </p>
-      <h2>Other Informations</h2>
+
+      <h2>Other Information</h2>
       <p>Likes: <em>Chocolate, RPG Games</em></p>
       <p>Dislikes: <em> NA</em></p>
       <p>Hobbies: <em> Chess, 2D Art Illustration</em></p>
 
-      <p
-        style="
-          text-align: center;
-          font-style: italic;
-          font-size: large;
-          margin-top: 10px;
-          color: #b8e638;
-          font-weight: bold;
-        "
-      >
       <h2>Socials</h2>
       <div style="display: flex; justify-content: space-evenly;">
         <a class="soc-links" href="https://github.com/kowaii/"
@@ -60,9 +53,30 @@
         /></a>
       </div>
 
-      </p>
-      <p style="text-align: center">"Everything Goes On"</p>
+      <p style="text-align: center; margin-top: 10px;">"Everything Goes On"</p>
     </div>
 
+    <!-- Script to calculate and display age -->
+    <script>
+      const birthDate = new Date(2003, 11, 24); // December is 11 (0-indexed)
+
+      function calculateAge(date) {
+        const today = new Date();
+        let age = today.getFullYear() - date.getFullYear();
+        const monthDiff = today.getMonth() - date.getMonth();
+        const dayDiff = today.getDate() - date.getDate();
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+          age--;
+        }
+        return age;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const ageElement = document.getElementById("age");
+        if (ageElement) {
+          ageElement.textContent = calculateAge(birthDate);
+        }
+      });
+    </script>
   </body>
 </html>

@@ -5,183 +5,143 @@
   padding: 0;
   box-sizing: border-box;
 }
-.nav-container{
-  position: absolute;
-  top: 40px;
 
-}
 body {
-
-  background-color: #99dbe1;
+  background: linear-gradient(180deg, #d7ecff 0%, #ffe6f0 100%);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  font-family: 'Tiny 5', sans-serif;
+  font-family: 'Tiny5', sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-attachment: fixed;
-  justify-content: center; 
-  align-items: center; 
-  color: #ffe6b3;
-  animation: fadeIn 1s ease-in-out; 
-  text-align: center; 
+  justify-content: center;
+  align-items: center;
+  color: #5a4b42; /* Soft brown for a pen-like color */
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
 }
 
+/* Title with soft pastel border like a notebook tab */
 .font {
   font-family: "Tiny5", sans-serif;
   font-size: 4em;
-  color: #ffd700;
-  text-shadow: 0 0 10px #ff9900, 0 0 20px #ff3300;
+  color: #6b6bff;
+  text-shadow: 0 0 8px #ffd5e5;
   margin-bottom: 20px;
-  padding: 10px;
-  border: 3px solid #DA6D91;
-  background-color: rgba(0, 0, 0, 0.356); 
-  border-radius: 10px;
-  max-width: 90%; 
+  padding: 15px 25px;
+  border: 2px solid #f4b6c2;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Navigation links look like sticky tabs */
 .navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; 
-  animation: fadeIn 1s ease-in-out; 
+  gap: 25px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .nav-link {
   font-family: "Micro 5", sans-serif;
-  font-size: 2.8em;
+  font-size: 2.5em;
   text-decoration: none;
-  color: #100f0d;
+  color: #ff80ab;
   font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s ease;
-  transform: scale(3);
   padding: 10px 15px;
-  border-radius: 5px;
-  border: 2px solid transparent;
+  background: #fff7fa;
+  border-radius: 8px;
+  border: 2px dashed #f48fb1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #ffcccb;
-  text-shadow: 0 0 10px #ff66cc; 
-  transform: scale(1.1); 
-  background-color: rgba(255, 255, 255, 0.3); 
-  border-color: #ffcccb;
+  background: #ffeef8;
+  color: #6b6bff;
+  transform: scale(1.05);
 }
 
-audio {
-  display: none;
+/* Notebook-style containers with subtle lined paper effect */
+.container, #poem-list {
+  position: relative;
+  background-color: #fffdfd;
+  border: 2px solid #a0d2eb;
+  border-radius: 12px;
+  padding: 30px 20px;
+  max-width: 420px;
+  min-width: 300px;
+  margin-top: 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fffdfd,
+    #fffdfd 28px,
+    #d4e5f5 30px
+  );
+  animation: fadeIn 1s ease-in-out;
+  display: none; /* Start hidden for toggling */
 }
 
+/* Tape effect (soft, washi tape style) */
+#poem-list::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+  width: 130px;
+  height: 35px;
+  background: rgba(255, 229, 229, 0.8);
+  border: 1px dashed rgba(255, 182, 193, 0.6);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* Links inside poem list like lined note entries */
+#poem-list a {
+  display: block;
+  margin: 10px 0;
+  padding: 8px 12px;
+  color: #6b6bff;
+  font-size: 1.2em;
+  background-color: rgba(255, 240, 245, 0.7);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#poem-list a:hover {
+  background-color: rgba(200, 230, 255, 0.9);
+  transform: translateX(6px);
+  color: #ff80ab;
+}
+
+/* Footer in soft tones */
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #1d293070;
-  color:#DA6D91;
-  
+  background-color: #ffeef8;
+  color: #f48fb1;
   font-family: "Tiny5", sans-serif;
   text-align: right;
   padding: 10px;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
 }
 
-.container{
-    
-    background-color: #3b421d54;
-    border: 2px solid #a8ad58;
-    padding: 10px;
-    flex: 1;
-    border-radius: 10px;
-    max-width: 350px;
-    flex-grow: 0;
-    min-width: 300px;
-    animation: fadeIn 1s ease-in-out; 
-    padding: 40px;
-    
-
-}
-
-/* Poem list container (with tape effect) */
-#poem-list {
-  position: relative;
-  margin-top: 30px;
-  background-color: #3b421d54;
-  border: 2px solid #a8ad58;
-  border-radius: 10px;
-  max-width: 400px;
-  min-width: 300px;
-  padding: 20px;
-  color: #ffe6b3;
-  font-family: 'Tiny5', sans-serif;
-  animation: fadeIn 1s ease-in-out;
-  display: none; /* Hidden by default, toggled by JS */
-}
-
-/* Tape effect (single strip at the top, diagonal) */
-#poem-list::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-5deg);
-  width: 120px;
-  height: 30px;
-  background: #f7e7ce; /* Tape color */
-  opacity: 0.8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-}
-
-/* Links inside the poem list */
-#poem-list a {
-  display: block;
-  margin: 8px 0;
-  padding: 6px 10px;
-  color: #ffdc6c;
-  font-size: 1.3em;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  background-color: rgba(0, 0, 0, 0.2);
-  text-align: left;
-}
-
-#poem-list a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
-  color: #ffd700;
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (max-width: 768px) {
-  body {
-    font-size: 0.9em; /* Slightly reduce overall font size */
-    padding: 10px;
-  }
-
-  .font {
-    font-size: 2em; /* Reduce the title size */
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-
-
-
-  .container {
-    min-width: 80%; 
-    padding: 0.8em;
-  }
-
+  body { font-size: 0.9em; padding: 10px; }
+  .font { font-size: 2.5em; padding: 10px; }
+  .container, #poem-list { min-width: 85%; padding: 20px; }
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-

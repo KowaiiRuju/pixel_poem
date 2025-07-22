@@ -6,89 +6,155 @@
   box-sizing: border-box;
 }
 
+/* Pastel gradient background (baby blue to pink) */
 body {
-  
-  background-color: #ff66cc;
+  background: linear-gradient(180deg, #d7ecff 0%, #ffe6f0 100%);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: 'Tiny 5', sans-serif;
+  background-attachment: fixed;
+  font-family: 'Tiny5', sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-attachment: fixed;
-  justify-content: center; 
-  align-items: center; 
-  color: #ffe6b3;
-  animation: fadeIn 1s ease-in-out; 
-  text-align: center; 
+  justify-content: center;
+  align-items: center;
+  color: #5a4b42; /* Soft brown ink */
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
+/* Poem container with lined paper effect */
 .poem-container {
   margin: 30px auto;
   max-width: 700px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid #DA6D91;
-  border-radius: 10px;
-  color: #ffe6b3;
-  text-align: left;
+  padding: 25px 20px;
+  background-color: #fffdfd;
+  border: 2px solid #a0d2eb; /* Pastel blue border */
+  border-radius: 12px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fffdfd,
+    #fffdfd 28px,
+    #d4e5f5 30px
+  ); /* Notebook lines */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  color: #5a4b42;
   font-size: 1.2em;
-  line-height: 1.6em;
+  line-height: 1.8em;
+  text-align: left;
+  position: relative;
 }
 
+/* Washi tape effect on the poem container (top left) */
+.poem-container::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: #f7e7ce;
+  transform: rotate(-5deg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  opacity: 0.8;
+}
+
+/* Back button styled like a sticky tab */
 .back-btn {
   display: inline-block;
   margin-bottom: 20px;
-  color: #ffdc6c;
+  color: #6b6bff; /* Pastel blue */
   font-size: 1.2em;
   text-decoration: none;
-  transition: color 0.3s ease;
-}
-.back-btn:hover {
-  color: #ff8c1a;
+  font-weight: bold;
+  background: #fff7fa;
+  border: 2px dashed #f48fb1;
+  border-radius: 8px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
 }
 
+.back-btn:hover {
+  background-color: #ffeef8;
+  color: #ff80ab;
+  transform: scale(1.05);
+}
+
+/* Poem Title with soft glow */
 .poem-title {
   font-family: "Tiny5", sans-serif;
-  font-size: 2em;
+  font-size: 2.2em;
   margin-bottom: 15px;
-  color: #ffd700;
-  text-shadow: 0 0 10px #ff9900;
+  color: #6b6bff;
+  text-shadow: 0 0 6px #ffd5e5;
 }
 
+/* Preserve line breaks and spacing */
 .poem-text {
-  white-space: pre-wrap; /* Keeps poem formatting with line breaks */
+  white-space: pre-wrap;
   font-family: 'Tiny5', sans-serif;
+  color: #5a4b42;
+}
+
+/* Inner notebook "page" */
+.page {
+  background: #fffdfd;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e0c5d1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fffdfd,
+    #fffdfd 28px,
+    #ffe0f0 30px
+  );
+  box-shadow: inset -5px 0 0 #f48fb1; /* Margin for spiral holes */
+  position: relative;
+}
+
+/* Spiral holes along the left */
+.page::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -18px;
+  width: 12px;
+  height: 90%;
+  background-image: radial-gradient(circle, #555 4px, transparent 5px);
+  background-size: 20px 40px;
+  background-repeat: repeat-y;
+}
+.nav-link {
+  font-family: "Micro 5", sans-serif;
+  font-size: 2.4em;
+  text-decoration: none;
+  color: #ff80ab;
+  font-weight: bold;
+  padding: 8px 12px;
+  background: #fff7fa;
+  border: 2px dashed #f48fb1;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   body {
-    font-size: 0.9em; /* Slightly reduce overall font size */
+    font-size: 0.9em;
     padding: 10px;
   }
-
-  .font {
-    font-size: 2em; /* Reduce the title size */
-    padding: 5px;
-    margin-bottom: 10px;
+  .poem-container {
+    min-width: 85%;
+    padding: 20px;
   }
-
-
-
-  .container {
-    min-width: 80%; 
-    padding: 0.8em;
+  .poem-title {
+    font-size: 1.8em;
   }
-
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
