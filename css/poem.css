@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Tiny5&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../../images/2f10ce69b96c0611989308b0abc68e70.gif");
+  background-color: #ff66cc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Tiny 5', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  justify-content: center; 
+  align-items: center; 
+  color: #ffe6b3;
+  animation: fadeIn 1s ease-in-out; 
+  text-align: center; 
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9em; /* Slightly reduce overall font size */
+    padding: 10px;
+  }
+
+  .font {
+    font-size: 2em; /* Reduce the title size */
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+
+
+  .container {
+    min-width: 80%; 
+    padding: 0.8em;
+  }
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
