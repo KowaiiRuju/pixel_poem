@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="css/music_player.css">
+  <script src="scripts/music_player.js" defer></script>
+</head>
+<body>
+  <div id="music-player-container">
+    <div id="music-player">
+      <button id="minimize-btn" aria-label="Minimize Player" title="Minimize Player">–</button>
+      <div id="music-logo">
+        <img src="images/music_logo.png" alt="Music Logo" draggable="false" />
+      </div>
+      <audio id="audio" controls preload="none" tabindex="0" aria-label="Audio Player"></audio>
+      <div id="player-controls">
+        <button id="prev" aria-label="Previous Track">⏮</button>
+        <button id="play-pause" aria-label="Play/Pause">▶</button>
+        <button id="next" aria-label="Next Track">⏭</button>
+      </div>
+      <span id="track-title">Now Playing: </span>
+    </div>
+  </div>
+</body>
+</html>

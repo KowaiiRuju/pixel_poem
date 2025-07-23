@@ -6,6 +6,7 @@
     <title>Welcome Page</title>
     <meta name="description" content="Welcome Traveller, ease your mind and check in to the Inn." />
     <link rel="stylesheet" href="css/styling.css" />
+    <link rel="stylesheet" href="css/music_player.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,28 +14,38 @@
       rel="stylesheet"
     />
   </head>
-  <body >
+  <body>
+    <!-- Music Player Widget -->
+    <div id="music-player-container">
+      <div id="music-player">
+        <span id="music-logo">
+            <img src="images/music_logo.png" alt="Music Logo" />
+          </span>
+        <audio id="audio" controls></audio>
+
+        <!-- Controls -->
+        <div id="player-controls">
+          
+          <button id="prev"><img src="images/previous.png" alt=""></button>
+          <button id="play-pause"><img src="images/play.png" alt=""></button>
+          <button id="next"><img src="images/next.png" alt=""></button>
+          <span id="track-title">Loading...</span>
+          <button id="minimize-btn" title="Minimize Player">–</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
     <div class="nav-links" style="margin-bottom: 50px; position: absolute; left: 30px; top: 20px;">
       <a href="profile.html" class="nav-link">Profile</a>
     </div>
-    
 
-
-      
-      <div class="links">
-        <a href="#" class="nav-link" id="toggle-poems">Click Me!</a>
-        
-      </div>
-      <div class="container" id="poem-list" style="display: none;"></div>
+    <div class="links">
+      <a href="#" class="nav-link" id="toggle-poems">Click Me!</a>
     </div>
-    <!--
-    
-    <audio autoplay loop>
-      <source src="Sonder(chosic.com).mp3" type="audio/mp3" />
-      Your browser does not support the audio element.
-    </audio>
-    <footer><p>Song: Sonder by Purrple Cat</p></footer>
-    -->
+    <div class="container" id="poem-list" style="display: none;"></div>
+
     <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/music_player.js" defer></script>
   </body>
 </html>
