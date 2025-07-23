@@ -108,7 +108,7 @@ body {
   padding: 8px 12px;
   color: #6b6bff;
   font-size: 1.2em;
-  background-color: rgba(255, 240, 245, 0.7);
+  background-color: #fffdfd00;
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
