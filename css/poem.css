@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Indie+Flower&display=swap');
+
 
 * {
   margin: 0;
@@ -11,7 +12,7 @@ body {
   background: linear-gradient(180deg, #d7ecff 0%, #ffe6f0 100%);
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Tiny5', sans-serif;
+  font-family: 'Indie Flower', cursive; /* Body uses Indie Flower */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,111 +23,83 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Poem container with lined paper effect */
+/* Container for the whole notebook */
 .poem-container {
-  margin: 30px auto;
-  max-width: 700px;
-  padding: 25px 20px;
-  background-color: #fffdfd;
-  border: 2px solid #a0d2eb; /* Pastel blue border */
-  border-radius: 12px;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #fffdfd,
-    #fffdfd 28px,
-    #d4e5f5 30px
-  ); /* Notebook lines */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  color: #5a4b42;
-  font-size: 1.2em;
-  line-height: 1.8em;
-  text-align: left;
   position: relative;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border-left: 6px solid #ffb3c1;
+  border-right: 3px solid #c7c7c7;
+  padding: 50px 30px 40px;
+  line-height: 1.6;
+  overflow: visible; /* allow tape outside */
+  font-family: 'Indie Flower', cursive;
 }
 
-/* Washi tape effect on the poem container (top left) */
+/* Washi tape at the top */
 .poem-container::before {
   content: "";
   position: absolute;
-  top: -18px;
-  left: 20px;
-  width: 100px;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);
+  width: 120px;
   height: 30px;
-  background-color: #f7e7ce;
-  transform: rotate(-5deg);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  border-radius: 3px;
-  opacity: 0.8;
+  background: #f7e7ce;
+  opacity: 0.9;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 10;
 }
 
-/* Back button styled like a sticky tab */
-.back-btn {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: #6b6bff; /* Pastel blue */
-  font-size: 1.2em;
-  text-decoration: none;
-  font-weight: bold;
-  background: #fff7fa;
-  border: 2px dashed #f48fb1;
-  border-radius: 8px;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
-}
-
-.back-btn:hover {
-  background-color: #ffeef8;
-  color: #ff80ab;
-  transform: scale(1.05);
-}
-
-/* Poem Title with soft glow */
-.poem-title {
-  font-family: "Tiny5", sans-serif;
-  font-size: 2.2em;
-  margin-bottom: 15px;
-  color: #6b6bff;
-  text-shadow: 0 0 6px #ffd5e5;
-}
-
-/* Preserve line breaks and spacing */
-.poem-text {
-  white-space: pre-wrap;
-  font-family: 'Tiny5', sans-serif;
-  color: #5a4b42;
-}
-
-/* Inner notebook "page" */
+/* Notebook "page" with lines */
 .page {
-  background: #fffdfd;
-  border-radius: 8px;
-  padding: 20px;
-  border: 1px solid #e0c5d1;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #fffdfd,
-    #fffdfd 28px,
-    #ffe0f0 30px
-  );
-  box-shadow: inset -5px 0 0 #f48fb1; /* Margin for spiral holes */
   position: relative;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fff 0px,
+    #fff 24px,
+    #ffe6f2 24px,
+    #ffe6f2 25px
+  );
+  border-left: 4px solid #ff85a1; /* pink margin line */
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 200px;
+  z-index: 1;
+  overflow-x: hidden;
+  font-family: 'Indie Flower', cursive;
 }
 
-/* Spiral holes along the left */
-.page::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -18px;
-  width: 12px;
-  height: 90%;
-  background-image: radial-gradient(circle, #555 4px, transparent 5px);
-  background-size: 20px 40px;
-  background-repeat: repeat-y;
+/* Poem text styles */
+.poem {
+  font-family: 'Indie Flower', cursive; /* Handwritten style */
+  font-size: 1.3rem; /* Slightly bigger for readability */
+  color: #3a2f2a; /* Softer "ink" tone instead of harsh black */
+  line-height: 1.8rem; /* Matches notebook lines better */
+  white-space: pre-wrap; /* Preserve line breaks */
+  word-wrap: break-word;
+  text-align: left; /* Looks like natural notes */
+  padding: 10px;
 }
+
+/* Title */
+.poem h2, .poem-title {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 2rem;
+  color: #7a5af5; /* Soft purple ink */
+  margin-bottom: 10px;
+  text-align: center;;
+}
+
+/* Navigation link */
 .nav-link {
-  font-family: "Micro 5", sans-serif;
-  font-size: 2.4em;
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 2em;
   text-decoration: none;
   color: #ff80ab;
   font-weight: bold;
@@ -138,6 +111,10 @@ body {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+.nav-link:hover {
+  transform: scale(1.05);
+  background-color: #ffe6ef;
+}
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {

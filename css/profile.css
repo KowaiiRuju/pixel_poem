@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Indie+Flower&display=swap');
 
 * {
   margin: 0;
@@ -6,20 +6,20 @@
   box-sizing: border-box;
 }
 
-/* General Page Styling (Pastel Gradient Background) */
+/* Pastel Gradient Background */
 body {
   background: linear-gradient(180deg, #d7ecff 0%, #ffe6f0 100%);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: 'Tiny5', sans-serif;
+  font-family: 'Indie Flower', cursive; /* Handwriting font */
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #5a4b42; /* Soft pen-like brown */
+  color: #5a4b42;
   text-align: center;
   gap: 25px;
   animation: fadeIn 1s ease-in-out;
@@ -27,25 +27,25 @@ body {
 
 /* Notebook Title */
 .font {
-  font-family: "Tiny5", sans-serif;
+  font-family: 'Edu NSW ACT Cursive', cursive; /* Decorative cursive for titles */
   font-size: 4em;
-  color: #6b6bff; /* Pastel blue */
-  text-shadow: 0 0 8px #ffd5e5; /* Soft pink glow */
+  color: #6b6bff;
+  text-shadow: 0 0 8px #ffd5e5;
   margin-bottom: 15px;
   padding: 12px 20px;
-  border: 2px solid #f4b6c2; /* Pink border */
+  border: 2px solid #f4b6c2;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   max-width: 90%;
 }
 
-/* Profile Picture with soft frame */
+/* Profile Picture */
 .pfp {
   animation: fadeIn 1s ease-in-out;
   width: 120px;
   border-radius: 12px;
-  border: 2px solid #a0d2eb; /* Pastel blue border */
+  border: 2px solid #a0d2eb;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
@@ -54,7 +54,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Profile Container (lined notebook style) */
+/* Profile Info Container (lined paper look) */
 .container {
   background-color: #fffdfd;
   border: 2px solid #a0d2eb;
@@ -67,38 +67,43 @@ body {
     #fffdfd,
     #fffdfd 28px,
     #d4e5f5 30px
-  ); /* Blue notebook lines */
+  );
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   animation: fadeIn 1s ease-in-out;
+  font-family: 'Indie Flower', cursive;
 }
 
-/* Links inside container (no underline, pastel look) */
+/* Links inside container */
 .container a {
   text-decoration: none;
   color: #6b6bff;
   font-weight: bold;
+  font-family: 'Edu NSW ACT Cursive', cursive;
 }
 
-/* Paragraphs and Highlights */
+/* Paragraph Styling */
 p {
-  font-family: "Tiny5", sans-serif;
+  font-family: 'Indie Flower', cursive;
   text-align: justify;
   color: #5a4b42;
+  line-height: 1.6;
+  font-size: 1.2em;
 }
 
 p em {
-  color: #ff80ab; /* Pastel pink highlight */
+  color: #ff80ab;
   text-decoration: underline;
   text-shadow: 0 0 5px rgba(255,192,203,0.5);
 }
 
+/* Headings */
 h1, h2 {
-  font-family: "Tiny5", sans-serif;
+  font-family: 'Edu NSW ACT Cursive', cursive;
   color: #6b6bff;
   margin: 10px 0;
 }
 
-/* Navigation Links styled like notebook sticky tabs */
+/* Navigation Buttons (Notebook Sticky Tabs) */
 .navigation {
   display: flex;
   flex-direction: column;
@@ -108,7 +113,7 @@ h1, h2 {
 }
 
 .nav-link {
-  font-family: "Micro 5", sans-serif;
+  font-family: 'Edu NSW ACT Cursive', cursive;
   font-size: 2.4em;
   text-decoration: none;
   color: #ff80ab;
@@ -127,14 +132,14 @@ h1, h2 {
   transform: scale(1.1);
 }
 
-/* Social Links Hover Pop */
+/* Social Links */
 .soc-links:hover {
   transform: scale(1.3);
   transition: transform 0.3s ease-out;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Responsive adjustments */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   body { font-size: 0.9em; padding: 10px; }
   .font { font-size: 2.5em; padding: 8px; }

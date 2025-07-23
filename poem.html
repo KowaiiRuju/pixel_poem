@@ -4,25 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Poem</title>
-  <!-- Use the notebook-style CSS -->
+
+  <!-- Google Fonts (handwritten notebook style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Indie+Flower&display=swap" rel="stylesheet">
+
+  <!-- Notebook styling -->
   <link rel="stylesheet" href="css/poem.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <div class="navigation" style="margin-bottom: 50px;">
     <div class="links" style="position: absolute; top: 20px; left: 20px;">
       <a href="index.html" class="nav-link nav-corner">Home</a>
     </div>
   </div>
 
-  <!-- Notebook container -->
+  <!-- Notebook Page -->
   <div class="poem-container">
-    <!-- Inner "page" for lined-paper look -->
     <div class="page">
       <div class="poem" id="poem-content">Loading poem...</div>
     </div>
   </div>
 
-  <!-- Script that loads the poem dynamically -->
+  <!-- Script -->
   <script src="scripts/poem.js" defer></script>
 </body>
 </html>
