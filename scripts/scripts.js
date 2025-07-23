@@ -12,6 +12,7 @@ async function loadPoemsList() {
       link.href = `poem.html?id=${poem.id}`;
       link.textContent = `${poem.id}. ${poem.title}`;
       link.style.display = 'block'; // Make each link on a new line
+
       link.style.margin = '5px 0';
       container.appendChild(link);
     });

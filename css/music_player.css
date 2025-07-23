@@ -1,9 +1,16 @@
 #music-player-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  width: 100%;
-  box-sizing: border-box;
+  align-items: flex-start;
+  position: absolute;
+  height: 200px;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  z-index: 1000;
 }
 
 #music-player {
@@ -20,6 +27,7 @@
   transition: max-height 0.3s ease;
   min-width: 0;
 }
+
 
 /* Minimize Button */
 #minimize-btn {
@@ -83,7 +91,7 @@
 
 /* Collapsed player */
 #music-player.collapsed {
-  max-height: 40px;
+  max-height: 80px;
   overflow: hidden;
   padding: 10px;
   min-width: 0;
@@ -92,36 +100,41 @@
 /* Responsive styles for mobile */
 @media (max-width: 600px) {
   #music-player-container {
-    margin-top: 10px;
-    padding: 0 4px;
+
+    right: 8px;
+    left: auto;
+    width: 200px;
+    max-width: 100vw;
+    min-width: 0;
+    z-index: 1000;
   }
   #music-player {
-    max-width: 100%;
+    max-width: 98vw;
     width: 100%;
-    padding: 10px 4px;
-    font-size: 1rem;
+    padding: 6px 2px;
+    font-size: 0.85rem;
     min-width: 0;
   }
   #music-logo img {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
   }
   #player-controls button {
-    font-size: 1rem;
-    padding: 10px 10px;
-    margin: 0 2px;
-    min-width: 36px;
+    font-size: 0.9rem;
+    padding: 6px 7px;
+    margin: 0 1px;
+    min-width: 24px;
   }
   #minimize-btn {
-    font-size: 1rem;
-    padding: 2px 4px;
-    top: 4px;
-    right: 4px;
+    font-size: 0.9rem;
+    padding: 1px 3px;
+    top: 2px;
+    right: 2px;
     z-index: 2;
   }
   #track-title {
-    font-size: 0.95rem;
-    margin-top: 6px;
+    font-size: 0.85rem;
+    margin-top: 4px;
     word-break: break-word;
   }
   #audio {

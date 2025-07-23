@@ -16,31 +16,29 @@
   </head>
   <body>
     <!-- Music Player Widget -->
-    <div id="music-player-container">
-      <div id="music-player">
-        <span id="music-logo">
-            <img src="images/music_logo.png" alt="Music Logo" />
-          </span>
-        <audio id="audio" controls></audio>
-
-        <!-- Controls -->
-        <div id="player-controls">
-          
-          <button id="prev"><img src="images/previous.png" alt=""></button>
-          <button id="play-pause"><img src="images/play.png" alt=""></button>
-          <button id="next"><img src="images/next.png" alt=""></button>
-          <span id="track-title">Loading...</span>
-          <button id="minimize-btn" title="Minimize Player">–</button>
-        </div>
-      </div>
-    </div>
+    
 
     <!-- Navigation Links -->
     <div class="nav-links" style="margin-bottom: 50px; position: absolute; left: 30px; top: 20px;">
       <a href="profile.html" class="nav-link">Profile</a>
     </div>
+    <div id="music-player-container">
+      <div id="music-player">
+        
+        <audio id="audio"></audio>
+        <!-- Controls -->
+        <div id="player-controls">
+          <button id="prev">⏮️</button>
+          <button id="play-pause">▶️</button>
+          <button id="next">⏭️</button>
+          <button id="minimize-btn" title="Minimize Player">–</button>
+        </div>
+        <span id="track-title">Loading...</span>
+        <div id="music-queue" style="display:none;"></div>
+      </div>
+    </div>
 
-    <div class="links">
+    <div class="links" style="margin-top: 125px;">
       <a href="#" class="nav-link" id="toggle-poems">Click Me!</a>
     </div>
     <div class="container" id="poem-list" style="display: none;"></div>

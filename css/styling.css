@@ -86,19 +86,27 @@ body {
   display: none; /* Start hidden for toggling */
 }
 
-/* Tape effect (soft, washi tape style) */
-#poem-list::before {
+/* Tape effect (soft, washi tape style) on left and right sides */
+#poem-list::before, #poem-list::after {
   content: "";
   position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-4deg);
-  width: 130px;
-  height: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 120px;
   background: rgba(255, 229, 229, 0.8);
-  border: 1px dashed rgba(255, 182, 193, 0.6);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border: 1.5px dashed rgba(255, 182, 193, 0.6);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  z-index: 1;
+}
+#poem-list::before {
+  left: -22px;
+  transform: translateY(-50%) rotate(-6deg);
+}
+#poem-list::after {
+  right: -22px;
+  transform: translateY(-50%) rotate(6deg);
 }
 
 /* Links inside poem list like lined note entries */
