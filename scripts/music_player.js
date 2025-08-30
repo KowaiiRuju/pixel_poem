@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { title: "Rex Orange County - Best Friend", src: "playlist/Rex Orange County - Best Friend.mp3" },
     { title: "Ride Home", src: "playlist/Ride Home.mp3" },
     { title: "TJ Monterde - Ikaw at Ako", src: "playlist/TJ Monterde - Ikaw at Ako.mp3" },
-    { title: "Purrple Cat - Sonder", src: "Sonder(chosic.com).mp3" }
+
   ];
 
   let currentTrack = 0;

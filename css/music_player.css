@@ -1,12 +1,10 @@
 #music-player-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   position: absolute;
-  height: 200px;
   top: 10px;
-  left: 0;
-  right: 0;
+  right: 10px;
+  justify-content: flex-end;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   width: 100vw;
@@ -24,7 +22,7 @@
   font-family: 'Tiny5', sans-serif;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   position: relative;
-  transition: max-height 0.3s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0.2, 0.2, 1);
   min-width: 0;
 }
 
@@ -100,7 +98,8 @@
 /* Responsive styles for mobile */
 @media (max-width: 600px) {
   #music-player-container {
-
+    position: absolute;
+    top: 10px;
     right: 8px;
     left: auto;
     width: 200px;
